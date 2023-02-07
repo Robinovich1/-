@@ -1,7 +1,10 @@
-print('a,b,c') # выводит "шапку" таблицы результатов
-for a in range(2): # перебор значений переменной a
-	for b in range(2): # перебор значений переменной b
-		for c in range(2): # перебор значений переменной c
-			# (a ∧ b) ∨ (c ∧ (¬a ∨ b))
-			if (a and b) or (c and (not(a) or b)): # условие задания
-				print(a,b,c) # вывод таблицы истиности со значениями каждой переменной
+for x in range(2):
+	for y in range(2):
+		for z in range(2):
+			for w in range(2):
+				#(x ∧ (y ∨ ¬z) ∧ w) ≡ (x → ¬y ∧ z)
+				if (x and (y or not(z)) and w) == (not(x) or  not(y) and z):
+					print(x,y,z,w)
+					
+
+
